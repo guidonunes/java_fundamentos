@@ -8,7 +8,10 @@ public class GameRunner {
 	}
 
 	public void run() {
-		
+		game.up();
+		game.down();
+		game.left();
+		game.right();
 	}
 
 }
