@@ -3,6 +3,7 @@ package com.in28minutes.spring.learn_spring_framework;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.in28minutes.spring.learn_spring_framework.game.GameRunner;
 import com.in28minutes.spring.learn_spring_framework.game.MarioGame;
 
 @SpringBootApplication
