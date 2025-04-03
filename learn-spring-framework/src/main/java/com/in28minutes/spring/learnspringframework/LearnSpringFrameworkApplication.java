@@ -14,12 +14,13 @@ import com.in28minutes.spring.learnspringframework.game.GamingConsole;
 public class LearnSpringFrameworkApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context 
-			= SpringApplication.run(LearnSpringFrameworkApplication.class, args);
 		//SuperContraGame game = new SuperContraGame();
 //		GamingConsole game = new PacManGame();
 		//GamingConsole game = new MarioGame();
 		//GameRunner runner = new GameRunner(game);
+		
+		ConfigurableApplicationContext context 
+			= SpringApplication.run(LearnSpringFrameworkApplication.class, args);
 		GameRunner runner = context.getBean(GameRunner.class);
 		runner.run();
 		
