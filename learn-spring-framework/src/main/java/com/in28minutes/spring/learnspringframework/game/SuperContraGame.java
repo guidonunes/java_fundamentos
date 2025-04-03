@@ -2,19 +2,19 @@ package com.in28minutes.spring.learnspringframework.game;
 
 public class SuperContraGame {
 	public void up() {
-		System.out.println("jump");
+		System.out.println("SupeContraGame up");
 	}
 	
 	public void down() {
-		System.out.println("down into a hole");
+		System.out.println("SupeContraGame down");
 	}
 	
 	public void left() {
-		System.out.println("stop");
+		System.out.println("SupeContraGame left");
 	}
 	
 	public void right() {
-		System.out.println("accelerate");
+		System.out.println("SupeContraGame right");
 	}
 
 }
