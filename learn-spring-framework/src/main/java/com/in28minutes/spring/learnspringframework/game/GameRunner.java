@@ -1,4 +1,4 @@
-package com.in28minutes.spring.learn_spring_framework.game;
+package com.in28minutes.spring.learnspringframework.game;
 
 public class GameRunner {
 	private MarioGame game;
