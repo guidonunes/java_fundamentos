@@ -4,12 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.in28minutes.spring.learnspringframework.enterprise.example.MyWebController;
+import com.in28minutes.spring.learnspringframework.enterprise.example.web.MyWebController;
 import com.in28minutes.spring.learnspringframework.game.GameRunner;
-import com.in28minutes.spring.learnspringframework.game.MarioGame;
-import com.in28minutes.spring.learnspringframework.game.PacManGame;
-import com.in28minutes.spring.learnspringframework.game.SuperContraGame;
-import com.in28minutes.spring.learnspringframework.game.GamingConsole;
 
 @SpringBootApplication
 public class LearnSpringFrameworkApplication {
