@@ -12,6 +12,16 @@ public class BusinessService {
 	@Autowired
 	private DataService dataService;
 	
+	
+	
+
+	public void setDataService(DataService dataService) {
+		System.out.println("Setter injection");
+		this.dataService = dataService;
+	}
+
+
+
 	public long calculateSum() {
 		List<Integer> data = dataService.getData();
 		return data.stream().reduce(Integer::sum).get();
