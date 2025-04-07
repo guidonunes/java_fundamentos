@@ -14,11 +14,6 @@ public class BusinessService {
 	
 	
 	
-	@Autowired
-	public void setDataService(DataService dataService) {
-		System.out.println("Setter injection");
-		this.dataService = dataService;
-	}
 
 
 
