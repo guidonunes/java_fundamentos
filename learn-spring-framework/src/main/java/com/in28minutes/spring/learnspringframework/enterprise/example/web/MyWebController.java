@@ -10,6 +10,13 @@ public class MyWebController {
 	@Autowired
 	private BusinessService businessService;
 	
+	@Autowired
+	public MyWebController(BusinessService businessService) {
+		super();
+		System.out.println("Constructor injection 2");
+		this.businessService = businessService;
+	}
+
 	public long returnValueFromBusinessService() {
 		return businessService.calculateSum();
 	}
