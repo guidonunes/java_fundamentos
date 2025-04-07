@@ -16,6 +16,17 @@ public class BusinessService {
 	
 
 
+	@Autowired
+	public BusinessService(DataService dataService) {
+		super();
+		System.out.println("Constructor injection");
+		this.dataService = dataService;
+	}
+
+
+
+
+
 
 	public long calculateSum() {
 		List<Integer> data = dataService.getData();
