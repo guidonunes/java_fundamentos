@@ -22,7 +22,7 @@ public class UserResource {
 	
 	
 	@GetMapping("/users/{id}")
-	public List<User> retrieveAllUsers(@PathVariable int id) {
-		return service.findAll();
+	public User retrieveUser(@PathVariable int id) {
+		return service.findOne(id);
 	}
 }
