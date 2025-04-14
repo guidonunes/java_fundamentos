@@ -37,7 +37,7 @@ public class UserResource {
 	}
 	
 	@DeleteMapping("/users/{id}")
-	public User retrieveUser(@PathVariable int id) {
+	public User deleteUser(@PathVariable int id) {
 		User user = service.findOne(id);
 		
 		if(user == null )
