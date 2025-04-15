@@ -44,5 +44,4 @@ public class VersioningPersonController {
 	public PersonV2 getSecondVersionOfPersonAcceptHeader() {
 		return new  PersonV2(new Name("Bob","Charlton"));
 	}
-	
 }
