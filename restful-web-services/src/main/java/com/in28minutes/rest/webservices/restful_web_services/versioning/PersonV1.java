@@ -11,5 +11,10 @@ public class PersonV1 {
 	public String getName() {
 		return name;
 	}
+
+	@Override
+	public String toString() {
+		return "PersonV1 [name=" + name + "]";
+	}
 	
 }
