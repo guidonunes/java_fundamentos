@@ -20,4 +20,9 @@ public class VersioningPersonController {
 	public PersonV1 getFirstVersionOfPersonRequestParameter() {
 		return new  PersonV1("Bob Charlton");
 	}
+	
+	@GetMapping(path = "person", params="version=2")
+	public PersonV2 getSecondVersionOfPersonRequestParameter() {
+		return new  PersonV2(new Name("Bob","Charlton"));
+	}
 }
