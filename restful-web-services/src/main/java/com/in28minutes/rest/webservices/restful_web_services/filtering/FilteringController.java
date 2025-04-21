@@ -33,9 +33,19 @@ public class FilteringController {
 	}
 	
 	@GetMapping("/filtering-list")
-	public List<SomeBean> filteringList() {
-		return Arrays.asList(new SomeBean("value1", "value2", "value3"),
+	public MappingJacksonValue filteringList() {
+		List<SomeBean> list = Arrays.asList(new SomeBean("value1", "value2", "value3"),
 				new SomeBean("value4", "value5", "value6")
 				);
+		MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(list);
+		
+		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("field2", "field3");
+		
+		FilterProvider filters = 
+				new SimpleFilterProvider().addFilter("SomeBeanFilter", filter);
+		
+		mappingJacksonValue.setFilters(filters);
+		
+		return mappingJacksonValue;
 	}
 }
