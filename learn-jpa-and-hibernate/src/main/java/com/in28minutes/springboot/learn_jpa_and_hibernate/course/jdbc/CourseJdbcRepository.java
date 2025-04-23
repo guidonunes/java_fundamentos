@@ -20,7 +20,8 @@ public class CourseJdbcRepository {
 	
 	
 	public void insert(Course course) {
-		springJdbcTemplate.update(INSERT_QUERY);
+		springJdbcTemplate.update(INSERT_QUERY, 
+				course.getId(), course.getName(), course.getAuthor());
 	}
 
 }
