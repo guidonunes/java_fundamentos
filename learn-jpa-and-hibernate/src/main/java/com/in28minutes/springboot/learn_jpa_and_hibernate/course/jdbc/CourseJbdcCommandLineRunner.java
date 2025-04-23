@@ -16,6 +16,8 @@ public class CourseJbdcCommandLineRunner implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 		repository.insert(new Course(1, "Learn AWS Now", "in28minutes"));
+		repository.insert(new Course(2, "Learn Azure Now", "in28minutes"));
+		repository.insert(new Course(3, "Learn German Now", "in28minutes"));
 	}
 
 }
