@@ -1,10 +1,11 @@
-package com.in28minutes.springboot.learn_jpa_and_hibernate.course.jdbc;
+package com.in28minutes.springboot.learn_jpa_and_hibernate.course;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.in28minutes.springboot.learn_jpa_and_hibernate.course.Course;
+import com.in28minutes.springboot.learn_jpa_and_hibernate.course.jdbc.CourseJdbcRepository;
 
 @Component
 public class CourseCommandLineRunner implements CommandLineRunner {
