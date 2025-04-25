@@ -6,12 +6,16 @@ import org.springframework.stereotype.Component;
 
 import com.in28minutes.springboot.learn_jpa_and_hibernate.course.Course;
 import com.in28minutes.springboot.learn_jpa_and_hibernate.course.jdbc.CourseJdbcRepository;
+import com.in28minutes.springboot.learn_jpa_and_hibernate.course.jpa.CourseJpaRepository;
 
 @Component
 public class CourseCommandLineRunner implements CommandLineRunner {
 	
+//	@Autowired
+//	private CourseJdbcRepository repository;
+	
 	@Autowired
-	private CourseJdbcRepository repository;
+	private CourseJpaRepository repository;
 
 	@Override
 	public void run(String... args) throws Exception {
