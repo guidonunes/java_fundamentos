@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import com.in28minutes.springboot.learn_jpa_and_hibernate.course.Course;
 
 @Component
-public class CourseJbdcCommandLineRunner implements CommandLineRunner {
+public class CourseCommandLineRunner implements CommandLineRunner {
 	
 	@Autowired
 	private CourseJdbcRepository repository;
