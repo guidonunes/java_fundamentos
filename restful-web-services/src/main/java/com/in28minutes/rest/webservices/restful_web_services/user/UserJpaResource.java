@@ -24,7 +24,7 @@ import jakarta.validation.Valid;
 @RestController
 public class UserJpaResource {
 	
-	private UserDaoService service;
+	
 	private UserRepository repository;
 	
 	public UserJpaResource(UserDaoService service, UserRepository repository) {
