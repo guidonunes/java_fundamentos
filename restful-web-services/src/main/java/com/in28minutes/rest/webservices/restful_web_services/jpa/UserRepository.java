@@ -1,4 +1,4 @@
-package com.in28minutes.rest.webservices.restful_web_services;
+package com.in28minutes.rest.webservices.restful_web_services.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
