@@ -28,11 +28,12 @@ public class UserJpaResource {
 	
 	public UserJpaResource(UserDaoService service, UserRepository repository) {
 		this.service = service;
+		this.repository = repository;
 	}
 	
 	@GetMapping("/jpa/users")
 	public List<User> retrieveAllUsers() {
-		return service.findAll();
+		return repository.findAll();
 	}
 	
 	
