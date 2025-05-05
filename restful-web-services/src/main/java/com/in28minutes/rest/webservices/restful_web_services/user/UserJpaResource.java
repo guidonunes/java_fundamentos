@@ -16,12 +16,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.in28minutes.rest.webservices.restful_web_services.jpa.UserRepository;
+
 import jakarta.validation.Valid;
 
 @RestController
 public class UserJpaResource {
 	
 	private UserDaoService service;
+	private UserRepository repository;
 	
 	public UserJpaResource(UserDaoService service) {
 		this.service = service;
