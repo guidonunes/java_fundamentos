@@ -27,13 +27,13 @@ public class UserJpaResource {
 		this.service = service;
 	}
 	
-	@GetMapping("/users")
+	@GetMapping("/jpa/users")
 	public List<User> retrieveAllUsers() {
 		return service.findAll();
 	}
 	
 	
-	@GetMapping("/users/{id}")
+	@GetMapping("/jpa/users/{id}")
 	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		User user = service.findOne(id);
 		
@@ -48,14 +48,14 @@ public class UserJpaResource {
 		return entityModel;
 	}
 	
-	@DeleteMapping("/users/{id}")
+	@DeleteMapping("/jpa/users/{id}")
 	public void deleteUser(@PathVariable int id) {
 		service.deleteById(id);
 		
 	}
 	
 	
-	@PostMapping("/users")
+	@PostMapping("/jpa/users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 		User savedUser = service.save(user);
 		
