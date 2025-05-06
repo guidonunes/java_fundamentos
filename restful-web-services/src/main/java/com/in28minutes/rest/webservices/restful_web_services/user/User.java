@@ -3,6 +3,7 @@ package com.in28minutes.rest.webservices.restful_web_services.user;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
@@ -30,6 +31,7 @@ public class User {
 	private LocalDate birthDate;
 	
 	@OneToMany(mappedBy ="user")
+	@JsonIgnore
 	private List<Post> posts;
 	
 	public User(int id, String name, LocalDate birthDate) {
