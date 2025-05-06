@@ -3,6 +3,7 @@ package com.in28minutes.rest.webservices.restful_web_services.user;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Post {
@@ -12,6 +13,9 @@ public class Post {
 	private Integer id;
 	
 	private String description;
+	
+	@ManyToOne
+	private User user;
 
 	public Integer getId() {
 		return id;
