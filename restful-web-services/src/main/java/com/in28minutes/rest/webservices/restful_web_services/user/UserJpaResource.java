@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.in28minutes.rest.webservices.restful_web_services.jpa.PostRepository;
 import com.in28minutes.rest.webservices.restful_web_services.jpa.UserRepository;
 
 import jakarta.validation.Valid;
@@ -24,12 +25,13 @@ import jakarta.validation.Valid;
 @RestController
 public class UserJpaResource {
 	
-	
 	private UserRepository repository;
+	private PostRepository postRepository;
 	
-	public UserJpaResource(UserDaoService service, UserRepository repository) {
+	public UserJpaResource(UserRepository repository, PostRepository postRepository) {
 		
 		this.repository = repository;
+		this.postRepository = postRepository;
 	}
 	
 	@GetMapping("/jpa/users")
@@ -81,5 +83,16 @@ public class UserJpaResource {
 				.buildAndExpand(savedUser.getId())
 				.toUri();
 		return ResponseEntity.created(location).build();
+	}
+	
+	@GetMapping("/jpa/users/{id}/posts")
+	public List<Post> createPostForUser(@PathVariable int id, @Valid @RequestBody Post post) {
+		Optional<User> user = repository.findById(id);
+		
+		if(user.isEmpty())
+			throw new UserNotFoundException("id:" + id);
+		
+		return user.get().getPosts();
+		
 	}
 }
